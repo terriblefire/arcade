@@ -8,4 +8,4 @@ Usually these are things i've reproduced while repairing a board. The idea is fo
 
 Seibu HB-41
 
-Taken from Gurudumps schematic (gurudumps.blogspot.com) but as there was no gerbers or shop to buy the board I spent an hour reverse engineering it (all the components have the same labels) and designed the board to be preassembled on one side by JLCPCB. 
+Taken from Gurudumps schematic (gurudumps.blogspot.com) but as there was no gerbers or shop to buy the board I spent an hour producing a board layout for me (all the components have the same labels) and designed the board to be preassembled on one side by JLCPCB. 
