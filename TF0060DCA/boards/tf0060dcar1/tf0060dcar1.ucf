@@ -6,9 +6,7 @@ NET "CLKOUT"      LOC="1";
 NET "CLKOUT" BUFG=CLK;
 NET "CLKOUT" TNM_NET = "CLKOUT"; # gives the net clk a group name as CLKOUT
 
-NET "SCLK"      LOC="29";
-NET "SCLK" BUFG=CLK;
-NET "SCLK" TNM_NET = "SCLK"; # gives the net clk a group name as SCLK
+
 
 TIMESPEC "TS_P2P" = FROM "PADS" TO "PADS" 10 ns;
 
@@ -17,6 +15,8 @@ NET "CLK<2>"      LOC="42";
 NET "DI"      LOC="27";
 #NET "DO"      LOC="28";
 NET "LOAD_SHIFT"      LOC="30";
+
+NET "SCLK"      LOC="29";
 
 NET "SD<0>"      LOC="32";
 NET "SD<1>"      LOC="33";

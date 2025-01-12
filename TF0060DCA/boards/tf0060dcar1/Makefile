@@ -3,12 +3,14 @@ BOARD=tf0060dca
 BOARDPREFIX=$(BOARD)r$(REVISION)
 
 RTLFOLDER=../../rtl/
-SOURCES="$(RTLFOLDER)/$(BOARD).v"
+SOURCES=$(RTLFOLDER)/$(BOARD).v
 PART=XC9536XL-10-VQ44
 
 all: $(BOARD)r$(REVISION)
-$(BOARD)r$(REVISION): clean
-	make -f ../Makefile.cpld BOARD=$(BOARD) SOURCES=$(SOURCES) REVISION=$(REVISION) OPTMODE=speed OPTIMISE=Area TOP=$(BOARD) PART=XC9536XL-10-VQ44
+mapping.mif: create_mapping.py
+	./create_mapping.py > $@
+$(BOARD)r$(REVISION): mapping.mif $(SOURCES) 
+	make -f ../Makefile.cpld BOARD=$(BOARD) SOURCES=$(SOURCES) REVISION=$(REVISION) OPTMODE=speed OPTIMISE=Area TOP=$(BOARD) PART=$(PART)
 flash:
 	xc3sprog -v -c ft232h -p0 $(BOARD)r$(REVISION)_top.jed:w
 zip: distclean $(BOARD)r$(REVISION)

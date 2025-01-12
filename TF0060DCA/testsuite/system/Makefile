@@ -12,7 +12,7 @@ XILINXMODS:= $(SUPPORT)/FDCPE.v $(SUPPORT)/FDCP.v $(SUPPORT)/PULLUP.v $(SUPPORT)
 
 all: $(TARGETS) 
 
-test_load.tb: test_load.v $(RTLSOURCES) 
+test_load.tb: test_load.v $(RTLSOURCES) mapping.mif
 	$(IV) -o $(@) -I$(RTLFOLDER) $(RTLSOURCES) $< $(XILINXMODS) 
 test_load.vcd: test_load.tb
 	./$< || (exit 1)

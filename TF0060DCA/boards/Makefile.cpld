@@ -12,7 +12,7 @@ ifndef SOURCES
 endif
 
 ifndef OPTIMIZE
-       OPTIMIZE:=speed
+       OPTIMIZE:=density
 endif
 
 ifndef OPTMODE

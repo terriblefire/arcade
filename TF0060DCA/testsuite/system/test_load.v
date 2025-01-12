@@ -5,6 +5,21 @@ module test_load;
 `include "system_fixture.vinc"   
 `include "../unittest.vinc"
 
+task setch;
+input [2:1] ch;
+input [7:0] val;
+begin
+    SD = val;
+    #50;
+    CLK = ch;
+    #50;
+    CLK = 2'b11;
+    #5;
+end 
+endtask 
+
+
+
 initial begin
 
 	$dumpfile("test_load.vcd");
@@ -14,14 +29,13 @@ initial begin
 
     #20000; 
 
-    SD = 8'hA5;
-    #150;
-    CLK[1] = 0;
-    #60;
-    CLK[1] = 1;
+    setch(2'b01, 'hFF);
+    #2000;
+    setch(2'b01, 'hFE);
+    #2000;
     
-    #200000;
-
+    setch(2'b10, 'h00);
+    #2000;
 
     $finish();
 
