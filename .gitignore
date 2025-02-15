@@ -1,5 +1,7 @@
 *#
 *.o
+*.d
 *.b#*
 *.s#*
 *~
+firmware/CH32V203C8T6/obj
