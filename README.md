@@ -9,3 +9,7 @@ Usually these are things i've reproduced while repairing a board. The idea is fo
 ## Seibu HB-41
 
 Taken from Gurudumps schematic (Taken from https://gurudumps.otenko.com/re/ ) but as there was no gerbers or shop to buy the board I spent an hour producing a board layout for me (all the components have the same labels) and designed the board to be preassembled on one side by JLCPCB. 
+
+## TC0060DCA - Digitally Controlled Attenuator for Taito. 
+
+Fresh design of the TC0060DCA. Only tested with opwolf so far. No documentation on what V_B is in the pinout so it is NC. 
