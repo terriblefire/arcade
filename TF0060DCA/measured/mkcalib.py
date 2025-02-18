@@ -18,18 +18,18 @@ with open("measured.csv", "r") as f:
     measured_profile = [float(x.strip().split(',')[-1]) for x in lines]
 
 
-mag = 0.41284
+mag = 1.0
 
 def fn(x):
     return mag/(1.0+exp(-10*((x/256.0)-0.6)))
 
 values = [fn(x) for x in range(0,256)]
 
-print("uint8_t lm1972_mapping[] = {")
+print("float tc0060dca_mapping[] = {")
 for i in range(0, 256):
     value = values[i]
-    idx = find_nearest(measured_profile, value)
-    print("0x%02X" % (idx,),end=",")
+
+    print("%f" % (value,),end=",")
     if i % 16 == 15:
         print()
 print("};")

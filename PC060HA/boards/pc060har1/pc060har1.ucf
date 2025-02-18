@@ -1,44 +1,52 @@
-# Copyright (C) 2016-2017, Stephen J. Leary
-# All rights reserved.
-#
-# This file is part of TF530 (Terrible Fire 030 Accelerator)
-#
-# TF530 is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# TF530 is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with TF530. If not, see <http://www.gnu.org/licenses/>.
+# This is free and unencumbered software released into the public domain.
 
-NET "nIC"      LOC="20";
-NET "nMCS"      LOC="89";
-NET "nMRD"      LOC="93";
-NET "nMWR"      LOC="91";
-NET "nPG"      LOC="30";
-NET "nROUT"      LOC="33";
-NET "nSCS"      LOC="90";
-NET "nNMI"      LOC="34";
-NET "nSRD"      LOC="94";
-NET "nSWR"      LOC="92";
-NET "AMP"      LOC="29";
-NET "IN0"      LOC="36";
-NET "IN1"      LOC="35";
-NET "MA0"      LOC="95";
-NET "MCLK"      LOC="23";
-NET "MD<0>"      LOC="97";
-NET "MD<1>"      LOC="2";
-NET "MD<2>"      LOC="4";
-NET "MD<3>"      LOC="16";
-NET "SA0"      LOC="96";
-NET "SCLK"      LOC="27";
+# Anyone is free to copy, modify, publish, use, compile, sell, or
+# distribute this software, either in source code form or as a compiled
+# binary, for any purpose, commercial or non-commercial, and by any
+# means.
+
+# In jurisdictions that recognize copyright laws, the author or authors
+# of this software dedicate any and all copyright interest in the
+# software to the public domain. We make this dedication for the benefit
+# of the public at large and to the detriment of our heirs and
+# successors. We intend this dedication to be an overt act of
+# relinquishment in perpetuity of all present and future rights to this
+# software under copyright law.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+# OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+# ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# OTHER DEALINGS IN THE SOFTWARE.
+
+# For more information, please refer to <https://unlicense.org>
+
+
+NET "nIC"       LOC="52";
+NET "nMCS"      LOC="79";
+NET "nMRD"      LOC="77";
+NET "nMWR"      LOC="78";
+NET "nNMI"      LOC="25";
+NET "nPG"       LOC="50";
+NET "nROUT"     LOC="28";
+NET "nSCS"      LOC="94";
+NET "nSRD"      LOC="96";
+NET "nSWR"      LOC="95";
+NET "AMP"      LOC="49";
+NET "IN0"      LOC="23";
+NET "IN1"      LOC="24";
+NET "MA0"      LOC="76";
+NET "MCLK"      LOC="27";
+NET "MD<0>"      LOC="74";
+NET "MD<1>"      LOC="71";
+NET "MD<2>"      LOC="65";
+NET "MD<3>"      LOC="55";
+NET "SA0"      LOC="99";
+NET "SCLK"      LOC="22";
 NET "SD<0>"      LOC="1";
-NET "SD<1>"      LOC="3";
+NET "SD<1>"      LOC="6";
 NET "SD<2>"      LOC="15";
-NET "SD<3>"      LOC="18";
+NET "SD<3>"      LOC="20";
 
