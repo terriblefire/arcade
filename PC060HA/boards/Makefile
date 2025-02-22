@@ -1,16 +1,13 @@
-PROJECT:=pc060ha
-BOARDS:=$(PROJECT)r1
-.PHONY: $(BOARDS)
-FOLDER:=$(PROJECT)_`date +"%Y_%m_%d"`
-all: clean
-	$(RM) -rf $(PROJECT)_* 	
-	mkdir ./$(FOLDER)
-	@- $(foreach BOARD,$(BOARDS), cd $(BOARD) ; make ; \
-	cp $(BOARD)*.jed ../$(FOLDER);)
-	zip $(FOLDER)_alpha.zip ./$(FOLDER)/*
-	$(RM) -rf $(FOLDER)
+PROJECT=pc060ha
+BOARD=$(PROJECT)r1
+GITVERSION=`git rev-parse --short HEAD`
+DATESTRING=`date +"%Y_%m_%d"`
+ZIPFILE=$(PROJECT)_$(DATESTRING)_$(GITVERSION).zip
+
+all: zip
+$(BOARD)/$(BOARD)_top.jed:
+	cd $(BOARD) ; make 
+zip: $(BOARD)/$(BOARD)_top.jed
+	zip $(ZIPFILE) $<
 clean:
-	$(RM) -rf $(PROJECT)_* 
-	@- $(foreach BOARD,$(BOARDS), make -C $(BOARD) clean;)
-distclean: 
-	@- $(foreach BOARD,$(BOARDS), make -C $(BOARD) distclean;)
+	$(RM) -rf $(BOARD)/$(BOARD)_top.jed $(ZIPFILE)

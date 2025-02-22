@@ -187,6 +187,7 @@
 <wire x1="36.683" y1="-0.127" x2="36.7338" y2="23.495" width="0" layer="20"/>
 <wire x1="36.7338" y1="23.495" x2="0.0508" y2="23.495" width="0" layer="20"/>
 <wire x1="0.0508" y1="23.495" x2="0" y2="0" width="0" layer="20"/>
+<text x="0.508" y="20.6248" size="1.778" layer="25">PC060HA</text>
 </plain>
 <libraries>
 <library name="eagle-ltspice" urn="urn:adsk.eagle:library:217">
@@ -2288,12 +2289,14 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0093.pdf</description>
 <signal name="AMP">
 <contactref element="J1" pad="13"/>
 <wire x1="32.5882" y1="20.6294" x2="32.5882" y2="18.6182" width="0.2032" layer="16"/>
-<wire x1="31.6484" y1="17.6784" x2="30.4038" y2="17.6784" width="0.2032" layer="16"/>
 <via x="30.4038" y="17.6784" extent="1-16" drill="0.35"/>
-<wire x1="32.5882" y1="18.6182" x2="31.6484" y2="17.6784" width="0.2032" layer="16"/>
+<wire x1="31.0134" y1="17.6784" x2="30.4038" y2="17.6784" width="0.2032" layer="16"/>
+<wire x1="32.3596" y1="18.3896" x2="32.5882" y2="18.6182" width="0.2032" layer="16"/>
 <contactref element="CPLD" pad="49"/>
 <wire x1="26.5674" y1="17.1332" x2="29.8586" y2="17.1332" width="0.2032" layer="1"/>
 <wire x1="29.8586" y1="17.1332" x2="30.4038" y2="17.6784" width="0.2032" layer="1"/>
+<wire x1="31.0134" y1="17.6784" x2="31.7246" y2="18.3896" width="0.2032" layer="16"/>
+<wire x1="31.7246" y1="18.3896" x2="32.3596" y2="18.3896" width="0.2032" layer="16"/>
 </signal>
 <signal name="!ROUT">
 <contactref element="J1" pad="16"/>
