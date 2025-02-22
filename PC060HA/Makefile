@@ -4,3 +4,4 @@ zip: clean
 	cp boards/*.zip . 
 clean:
 	make -C boards clean
+	$(RM) -rf *.zip

@@ -5,3 +5,4 @@ PC060HA: clean
 	cp PC060HA/*.zip . 
 clean:
 	make -C PC060HA clean
+	rm -rf *.zip

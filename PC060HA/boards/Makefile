@@ -11,3 +11,4 @@ zip: $(BOARD)/$(BOARD)_top.jed
 	zip $(ZIPFILE) $<
 clean:
 	$(RM) -rf $(BOARD)/$(BOARD)_top.jed $(ZIPFILE)
+	$(RM) -rf *.zip
