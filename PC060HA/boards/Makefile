@@ -1,15 +1,16 @@
 PROJECT:=pc060ha
 BOARDS:=$(PROJECT)r1
 .PHONY: $(BOARDS)
-FOLDER:=tfmsx_`date +"%Y_%m_%d"`
+FOLDER:=$(PROJECT)_`date +"%Y_%m_%d"`
 all: clean
-	rm -rf ./tf*_*
+	$(RM) -rf $(PROJECT)_* 	
 	mkdir ./$(FOLDER)
-	@- $(foreach BOARD,$(BOARDS), make -C $(BOARD); \
-	cp $(BOARD)/*.jed ./$(FOLDER);)
+	@- $(foreach BOARD,$(BOARDS), cd $(BOARD) ; make ; \
+	cp $(BOARD)*.jed ../$(FOLDER);)
 	zip $(FOLDER)_alpha.zip ./$(FOLDER)/*
-	rm -rf $(FOLDER)
-clean: 
+	$(RM) -rf $(FOLDER)
+clean:
+	$(RM) -rf $(PROJECT)_* 
 	@- $(foreach BOARD,$(BOARDS), make -C $(BOARD) clean;)
 distclean: 
 	@- $(foreach BOARD,$(BOARDS), make -C $(BOARD) distclean;)
