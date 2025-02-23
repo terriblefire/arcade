@@ -28,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arcade_artifacts
-          path: /host/*.zip
+          path: *.zip
