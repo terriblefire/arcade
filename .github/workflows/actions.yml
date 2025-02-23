@@ -23,7 +23,7 @@ jobs:
           image: terriblefire78/xilinx:v1
           options: -v ${{ github.workspace }}:/usr/src/compile --workdir /usr/src/compile 
           run: 
-            git config --global --add safe.directory /usr/src/compile && make 
+            git config --global --add safe.directory /usr/src/compile && chmod -R 777 /usr/src/compile && make 
       - name: Save Artifacts
         uses: actions/upload-artifact@v4
         with:
